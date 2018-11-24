@@ -7,7 +7,7 @@
 - Put 4 digit numbers when receiving an automated phone call
 
 ### 2. EC2 (Amazon Elastic Compute Cloud) Instance Set-up  
-- Creating EC2 Instance on AWS  
+- **Creating EC2 Instance on AWS**  
     Goto aws.amazon.com   
   -> access to EC2  
   -> click on "Launch Instance"    
@@ -20,7 +20,7 @@
   -> Review and Launch   
   -> Launch: At popup, choose 'create a new key pair' option.   
     Put a new key pair name and then download key pair (*.pem file)    
-- Using SSH to connect to EC2 over internet.  
+- **Using SSH to connect to EC2 over internet**  
   Secure Shell Connection (SSH) is different for Windows vs.Linux/Mac. 
   -> google search: SSH + Windows + EC2 and then 
   -> access to https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html   
@@ -37,4 +37,4 @@
      ubuntu@ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com   
      "ubuntu" because we use ubuntu when creating EC2 Instance.   
      pulic name is "ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com" (refer to Public DNS at EC2)   
-- Setting-up Spark and Jupyter on EC2 Instance.
+- **Setting-up Spark and Jupyter on EC2 Instance**

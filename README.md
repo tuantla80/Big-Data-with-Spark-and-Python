@@ -9,8 +9,10 @@
 ### 2. EC2 (Amazon Elastic Compute Cloud) Instance Set-up  
 - Creating EC2 Instance on AWS
   Goto aws.amazon.com 
-  -> access to EC2 
-  -> click on "Launch Instance" 
+  -> access to EC2 --
+  
+  -> click on "Launch Instance" --
+  
   -> Choose AMI (Amazon Machine Image): Ubuntu (Free tier eligible) 
   -> Choose "t2.micro Free tier eligible" 
   -> Next... -->Next...

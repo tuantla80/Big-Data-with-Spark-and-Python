@@ -48,12 +48,15 @@
 	result: /usr/bin/python3  
 	**But we need Python that we install with Anaconda so do**  
 	ubuntu@ip-172-31-31-67:~$ source .bashrc  
-	(or you may need to try adding below line to your .bashrc file. )  
-	ubuntu@ip-172-31-31-67:~$ export PATH=~/anaconda3/bin:$PATH  
+	(or you may need to try adding below line to your .bashrc file.  
+	(ubuntu@ip-172-31-31-67:~$ export PATH=~/anaconda3/bin:$PATH )  
+	ubuntu@ip-172-31-31-67:~$ which python3  
+	result: /home/ubuntu/anaconda3/bin/python3
 	ubuntu@ip-172-31-31-67:~$ conda --version  
 	ubuntu@ip-172-31-31-67:~$ conda info  
 ### 3.2. Jupyter Notebook configuration to use in EC2
-- ubuntu@ip-172-31-31-67:~$ jupyter notebook --generate-config  
+- ubuntu@ip-172-31-31-67:~$ jupyter notebook --generate-config    
+  result: /home/ubuntu/.jupyter/jupyter_notebook_config.py
 - ubuntu@ip-172-31-31-67:~$ mkdir certs  
 - ubuntu@ip-172-31-31-67:~$ cd certs  
 - ubuntu@ip-172-31-31-67:~/certs$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem  

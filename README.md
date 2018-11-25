@@ -61,4 +61,11 @@
 - ubuntu@ip-172-31-31-67:~$ cd certs  
 - ubuntu@ip-172-31-31-67:~/certs$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem  
 - ubuntu@ip-172-31-31-67:~/certs$ cd ~/.jupyter/  
-- ubuntu@ip-172-31-31-67:~/.jupyter$ vi jupyter_notebook_congif.py
+- ubuntu@ip-172-31-31-67:~/.jupyter$ vi jupyter_notebook_congif.py  
+  press i  (Insert)-> and type  
+  c = get_config()  
+  c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem'  
+  c.NotebookApp.ip = '*'  
+  c.NotebookApp.open_browser = False  
+  c.NotebookApp.port = 8888  
+  press Esc and then press :wq!  (w:write, q: quit)

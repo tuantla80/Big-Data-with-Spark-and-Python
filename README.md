@@ -93,9 +93,11 @@
 - Tell Python where to find Spark  
   $ export SPARK_HOME='/home/ubuntu/spark-2.4.0-bin-hadoop2.7'  
   $ export PATH=$SPARK_HOME:$PATH  
-  $ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH  
-  
-### 4. Python editor and tips  
+  $ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH     
+### 4. Setting-up tensorflow  
+- At Linux and MacOS:   
+  $ pip install tensorflow==1.10  or latest version
+### 5. Python editor and tips  
 - using $ipython    
   Tell ipython where to fins spark
   export PYSPARK_DRIVER_PYTHON=ipython
@@ -107,10 +109,6 @@
   import os  
   os.environ['QT_QPA_PLATFORM']='offscreen'  
   import matplotlib.pyplot as plt
-  
-  
-  
-
   
   
   

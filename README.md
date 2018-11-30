@@ -95,5 +95,20 @@
   $ export PATH=$SPARK_HOME:$PATH  
   $ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH  
   
+### 4. Python editor and tips  
+- using $ipython
+- To run matplotlib  
+  import matplotlib.pyplot as plt
+  QXcbConnection: Could not connect to display
+  Aborted (core dumped)  
+  => Need to:    
+  import os  
+  os.environ['QT_QPA_PLATFORM']='offscreen'  
+  import matplotlib.pyplot as plt
+  
+  
+  
+
+  
   
   

@@ -40,28 +40,28 @@
 ### 3. Setting-up Anaconda3, Jupyter and Spark on EC2 Instance
 ### 3.1. Anaconda set-up (for Linux)
 - ubuntu@ip-172-31-31-67:~$ wget http://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh  
-- ubuntu@ip-172-31-31-67:~$ bash Anaconda3-4.3.1-Linux-x86_64.sh   
+- $ bash Anaconda3-4.3.1-Linux-x86_64.sh   
 	It will ask about license argreement.  
 	-> Press Enter ->...-> At the end "yes" to install Anaconda3 at /home/ubuntu/anaconda3  
 	**Check Python**   
-	ubuntu@ip-172-31-31-67:~$ which python3  
+	$ which python3  
 	result: /usr/bin/python3  
 	**But we need Python that we install with Anaconda so do**  
-	ubuntu@ip-172-31-31-67:~$ source .bashrc  
+	$ source .bashrc  
 	(or you may need to try adding below line to your .bashrc file.  
-	(ubuntu@ip-172-31-31-67:~$ export PATH=~/anaconda3/bin:$PATH )  
-	ubuntu@ip-172-31-31-67:~$ which python3  
+	$ export PATH=~/anaconda3/bin:$PATH )  
+	$ which python3  
 	result: /home/ubuntu/anaconda3/bin/python3
-	ubuntu@ip-172-31-31-67:~$ conda --version  
-	ubuntu@ip-172-31-31-67:~$ conda info  
+	$ conda --version  
+	$ conda info  
 ### 3.2. Jupyter Notebook configuration to use in EC2
-- ubuntu@ip-172-31-31-67:~$ jupyter notebook --generate-config    
+- $ jupyter notebook --generate-config    
   result: /home/ubuntu/.jupyter/jupyter_notebook_config.py
-- ubuntu@ip-172-31-31-67:~$ mkdir certs  
-- ubuntu@ip-172-31-31-67:~$ cd certs  
-- ubuntu@ip-172-31-31-67:~/certs$ sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem  
-- ubuntu@ip-172-31-31-67:~/certs$ cd ~/.jupyter/  
-- ubuntu@ip-172-31-31-67:~/.jupyter$ vi jupyter_notebook_congif.py  
+- $ mkdir certs  
+- $ cd certs  
+- $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem  
+- $ cd ~/.jupyter/  
+- $ vi jupyter_notebook_congif.py  
   press i  (Insert)-> and type  
   c = get_config()  
   c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem'  
@@ -69,25 +69,25 @@
   c.NotebookApp.open_browser = False  
   c.NotebookApp.port = 8888  
   press Esc and then press :wq!  (w:write, q: quit)  
-  ubuntu@ip-172-31-31-67:~/.jupyter$ jupyter notebook    
+  $ jupyter notebook    
   (may need to do some actions to run jupyter notebook)      
 ### 3.3. Spark    
 - Because Spark is written in Scala, need to install Scala.   
   But Scala depends on Java, so we need to install Java.  
-- ubuntu@ip-172-31-31-67:~/.jupyter$ sudo apt-get update  
+- $ sudo apt-get update  
   (it will run to update somethings)    
-- Change the directory to ubuntu@ip-172-31-31-67:~$ to install Java.  
-  ubuntu@ip-172-31-31-67:~$ sudo apt-get install default-jre    
-  check Java worsk: ubuntu@ip-172-31-31-67:~$ java -version  
+- Change the directory to $ to install Java.  
+  $ sudo apt-get install default-jre    
+  check Java worsk: $ java -version  
 - Intall Scala    
-  ubuntu@ip-172-31-31-67:~$ sudo apt-get install scala  
-  check Scala worsk: ubuntu@ip-172-31-31-67:~$ scala -version   
+  $ sudo apt-get install scala  
+  check Scala worsk: $ scala -version   
 - Install py4j (connect Python to Java)    
-  ubuntu@ip-172-31-31-67:~$ export PATH=$PATH:$HOME/anaconda3/bin    
-  ubuntu@ip-172-31-31-67:~$ conda install pip    
+  $ export PATH=$PATH:$HOME/anaconda3/bin    
+  $ conda install pip    
   $ which pip  -> result /home/ubuntu/anaconda3/bin/pip  
   $ pip install py4j    
-  - **Install Spark**    
+- **Install Spark**    
   $ wget http://archive.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz  
   $ sudo tar -zxvf spark-2.4.0-bin-hadoop2.7.tgz  
 - Tell Python where to find Spark  

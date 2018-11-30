@@ -96,7 +96,9 @@
   $ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH  
   
 ### 4. Python editor and tips  
-- using $ipython
+- using $ipython    
+  Tell ipython where to fins spark
+  export PYSPARK_DRIVER_PYTHON=ipython
 - To run matplotlib  
   import matplotlib.pyplot as plt
   QXcbConnection: Could not connect to display

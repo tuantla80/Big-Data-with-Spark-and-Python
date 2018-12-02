@@ -118,27 +118,29 @@
    Out[17]: '/home/ubuntu/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc'  
   **Solution**    
 ### 6. Create env using file_name.yml file    
-- Step 1: Make a **tf_deeplearning_env.yml**. For example:    
-> name: tf_deeplearning
-> channels:
-> - defaults
-> dependencies:
-> - List all libraries here. For example:
-> - jupyter=1.0.0=py35_3
-> - matplotlib=2.0.2=np113py35_0
-> - pandas=0.20.3=py35_0
-> - pandocfilters=1.4.2=py35_0
-> - pip=9.0.1=py35_1
-> - python=3.5.4=0
-> - scikit-learn=0.19.0=np113py35_0
-> - pip:
->  - List all pip install here. For example
->  - ipython-genutils==0.2.0
->  - jupyter-client==5.1.0
->  - tensorflow==1.3.0
->  - tensorflow-tensorboard==0.1.6
-> prefix: C:\Users\tuantla\Anaconda3\envs\tf_deeplearning  
+- Step 1: Make a **tf_deeplearning_env.yml**. For example: 
+~~~
+  > name: tf_deeplearning   
+  > channels:   
+  > - defaults
+  > dependencies:
+  > - List all libraries here. For example:
+  > - jupyter=1.0.0=py35_3
+  > - matplotlib=2.0.2=np113py35_0
+  > - pandas=0.20.3=py35_0
+  > - pandocfilters=1.4.2=py35_0
+  > - pip=9.0.1=py35_1
+  > - python=3.5.4=0
+  > - scikit-learn=0.19.0=np113py35_0
+  > - pip:
+  >  - List all pip install here. For example
+  >  - ipython-genutils==0.2.0
+  >  - jupyter-client==5.1.0
+  >  - tensorflow==1.3.0
+  >  - tensorflow-tensorboard==0.1.6
+  > prefix: C:\Users\tuantla\Anaconda3\envs\tf_deeplearning  
 - Step 2: From cmd, change to the directory which has **tf_deeplearning_env.yml** and run  
   > conda env create -f **tf_deeplearning_env.yml**    
   And then activate it. In windows:  
   > active **tf_deeplearning_env.yml**
+~~~

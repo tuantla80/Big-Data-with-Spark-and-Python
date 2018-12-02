@@ -132,7 +132,7 @@
    - pip=9.0.1=py35_1
    - python=3.5.4=0
    - scikit-learn=0.19.0=np113py35_0
-   - pip:
+   pip:
     - List all pip install here. For example
     - ipython-genutils==0.2.0
     - jupyter-client==5.1.0
@@ -142,7 +142,7 @@
 ~~~   
 - Step 2: From cmd, change to the directory which has **tf_deeplearning_env.yml** and run  
 ~~~
-  > conda env create -f **tf_deeplearning_env.yml**    
+  > conda env create -f tf_deeplearning_env.yml    
   And then activate it. In windows:  
   > active **tf_deeplearning_env.yml**
 ~~~

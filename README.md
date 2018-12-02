@@ -139,17 +139,20 @@
     - tensorflow==1.3.0
     - tensorflow-tensorboard==0.1.6
    prefix: C:\Users\tuantla\Anaconda3\envs\tf_deeplearning  
-~~~   
-- Step 2: **Activate**  
-From cmd, change to the directory which has **tf_deeplearning_env.yml** and run  
-~~~
+~~~     
+- Step 2. **Create environment**  
+  ~~~
+  From cmd, change to the directory which has **tf_deeplearning_env.yml** and run
   > conda env create -f tf_deeplearning_env.yml    
-  And then activate it. In windows:  
-  > active **tf_deeplearning_env.yml**
-~~~    
--> And you are now in the virtual environment of tf_deeplearning
+  ~~~   
+- Step 3: **Activate**  
+  ~~~
+  In windows:  
+  > conda active **tf_deeplearning_env.yml**
+  ~~~    
+  -> And you are now in the virtual environment of tf_deeplearning
 - Step 3: **Deactive**  
-If we want to escape the above environment:  
-~~~
- > deactivate  
-~~~ 
+  If we want to escape the above environment:  
+  ~~~
+  > deactivate  
+  ~~~ 

@@ -119,11 +119,11 @@
   **Solution**    
 ### 6. Create env using file_name.yml file    
 - Step 1: Make a **tf_deeplearning_env.yml**. For example: 
-~~~
-   name: tf_deeplearning   
-   channels:   
+  ~~~
+  name: tf_deeplearning   
+  channels:   
    - defaults
-   dependencies:
+  dependencies:
    - List all libraries here. For example:
    - jupyter=1.0.0=py35_3
    - matplotlib=2.0.2=np113py35_0
@@ -132,27 +132,26 @@
    - pip=9.0.1=py35_1
    - python=3.5.4=0
    - scikit-learn=0.19.0=np113py35_0
-   pip:
+  pip:
     - List all pip install here. For example
     - ipython-genutils==0.2.0
     - jupyter-client==5.1.0
     - tensorflow==1.3.0
     - tensorflow-tensorboard==0.1.6
    prefix: C:\Users\tuantla\Anaconda3\envs\tf_deeplearning  
-~~~     
+  ~~~     
 - Step 2. **Create environment**  
   ~~~
   From cmd, change to the directory which has **tf_deeplearning_env.yml** and run
   > conda env create -f tf_deeplearning_env.yml    
   ~~~   
-- Step 3: **Activate**  
+- Step 3: **Activate** and **Deactive** 
   ~~~
   In windows:  
   > conda active **tf_deeplearning_env.yml**
   ~~~    
   -> And you are now in the virtual environment of tf_deeplearning
-- Step 3: **Deactive**  
-  If we want to escape the above environment:  
+  -> If we want to escape the above environment:  
   ~~~
-  > deactivate  
+  > conda deactivate  
   ~~~ 

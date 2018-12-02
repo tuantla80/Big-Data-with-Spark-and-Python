@@ -102,13 +102,24 @@
   Tell ipython where to fins spark
   export PYSPARK_DRIVER_PYTHON=ipython
 - To run matplotlib  
-  import matplotlib.pyplot as plt
+  (1) import matplotlib.pyplot as plt
   QXcbConnection: Could not connect to display
   Aborted (core dumped)  
   => Need to:    
   import os  
   os.environ['QT_QPA_PLATFORM']='offscreen'  
-  import matplotlib.pyplot as plt
+  import matplotlib.pyplot as plt  
+  (2) **Error**  
+  plt.imshow(mnist.train.images[1].reshape(28,28))  
+  **QFontDatabase: Cannot find font directory /home/ubuntu/anaconda3/lib/fonts - is Qt installed correctly?**
+  Check: >matplotlib.get_backend()  
+  output: "Qt5Agg'  
+  Check: matplotlib.matplotlib_fname()  
+   Out[17]: '/home/ubuntu/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc'  
+  **Solution**  
+  
+
+  
   
   
   

@@ -1,4 +1,7 @@
 # bigdata
+## I. Skill-set  
+### 1. Pandas Experience  
+## II. Setup  
 ### 1. Set-up AWS account
 - https://aws.amazon.com/free
 - Create Free Account

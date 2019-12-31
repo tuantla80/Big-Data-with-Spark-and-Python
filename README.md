@@ -1,6 +1,6 @@
 # bigdata
 ## I. Skill-set  
-### 1. Pandas Experience  (https://github.com/tuantla80/Big-data-analytics/blob/master/pandas%20cheatsheet.ipynb)  
+### 1. [Pandas Experience](https://github.com/tuantla80/Big-data-analytics/blob/master/pandas%20cheatsheet.ipynb)  
 
 ## II. Setup  
 ### 1. Set-up AWS account

@@ -38,13 +38,14 @@
      Publish DNS on EC2: ex. ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com  
      pulic name is "ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com" (refer to Public DNS at EC2)    
 - **SSH with Linux/Mac: connect to EC2 over internet**  
-     (it is simpler on Linux/Mac than on Windows. It needs only two command lines)
+     (it is simpler on Linux/Mac than on Windows. It needs only two command lines)  
   -> $ chmod 400 newspark.pem  
   -> $ ssh -i newspark.pem ubuntu@ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com
-### 3. Setting-up Anaconda3, Jupyter and Spark on EC2 Instance
-### 3.1. Anaconda set-up (for Linux)
-- ubuntu@ip-172-31-31-67:~$ wget http://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh  
-- $ bash Anaconda3-4.3.1-Linux-x86_64.sh   
+### 3. Setting-up Anaconda3, Jupyter and PySpark on EC2 Instance
+### 3.1. Anaconda set-up (for Linux)  
+Latest verion of Anaconda: https://repo.anaconda.com/archive/  
+- ubuntu@ip-172-31-31-67:~$ wget http://repo.continuum.io/archive/Anaconda3-2020.07-Linux-x86_64.sh  
+- $ bash Anaconda3-2020.07-Linux-x86_64.sh  
 	It will ask about license argreement.  
 	-> Press Enter ->...-> At the end "yes" to install Anaconda3 at /home/ubuntu/anaconda3  
 	**Check Python**   
@@ -65,7 +66,7 @@
 - $ cd certs  
 - $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem  
 - $ cd ~/.jupyter/  
-- $ vi jupyter_notebook_congif.py  
+- $ vi jupyter_notebook_congif.py  (may use nano or any other editors)  
   press i  (Insert)-> and type  
   c = get_config()  
   c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem'  
@@ -73,8 +74,11 @@
   c.NotebookApp.open_browser = False  
   c.NotebookApp.port = 8888  
   press Esc and then press :wq!  (w:write, q: quit)  
-  $ jupyter notebook    
-  (may need to do some actions to run jupyter notebook)      
+  $ jupyter notebook   
+  Go to browser and run: https://[Public DNS on EC2]:8888  <--May ERROR: Need to do the following ways.  
+  - Change ownership. Ref. https://stackoverflow.com/questions/53097180/permissionerror-errno-13-permission-denied-when-accessing-to-aws-ec2  
+  - After that run  https://[Public DNS on EC2]:8888 --> Input the token as shown in the console.
+       
 ### 3.3. Spark    
 - Because Spark is written in Scala, need to install Scala.   
   But Scala depends on Java, so we need to install Java.  

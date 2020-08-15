@@ -84,7 +84,7 @@ Latest verion of Anaconda: https://repo.anaconda.com/archive/
   But Scala depends on Java, so we need to install Java.  
 - $ sudo apt-get update  
   (it will run to update somethings)    
-- Change the directory to $ to install Java.  
+- To install Java.  
   $ sudo apt-get install default-jre    
   check Java worsk: $ java -version  
 - Intall Scala    
@@ -95,11 +95,12 @@ Latest verion of Anaconda: https://repo.anaconda.com/archive/
   $ conda install pip    
   $ which pip  -> result /home/ubuntu/anaconda3/bin/pip  
   $ pip install py4j    
-- **Install Spark**    
-  $ wget http://archive.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz  
-  $ sudo tar -zxvf spark-2.4.0-bin-hadoop2.7.tgz  
-- Tell Python where to find Spark  
-  $ export SPARK_HOME='/home/ubuntu/spark-2.4.0-bin-hadoop2.7'  
+- **Install Spark and Hadoop**  
+  Spark latest version: http://archive.apache.org/dist/spark/  
+  $ wget http://archive.apache.org/dist/spark/spark-3.0.0/spark-3.0.0-bin-hadoop3.2.tgz  
+  $ sudo tar -zxvf spark-3.0.0-bin-hadoop3.2.tgz  
+  - Tell Python where to find Spark  
+  $ export SPARK_HOME='/home/ubuntu/spark-3.0.0-bin-hadoop3.2.tgz'  
   $ export PATH=$SPARK_HOME:$PATH  
   $ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH     
 ### 4. Setting-up tensorflow  

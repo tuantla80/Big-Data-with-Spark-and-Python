@@ -18,8 +18,8 @@
   -> At Configure Security Group: Choose type: All trafic (instead of default is SSH)   
   -> Review and Launch   
   -> Launch: At popup, choose 'create a new key pair' option.   
-    Put a new key pair name and then download key pair (*.pem file)    
-- **Using SSH to connect to EC2 over internet**  
+    Put a new key pair name and then download key pair (Ex. newspark.pem file)    
+- **SSH with Windows: connect to EC2 over internet**  
   Secure Shell Connection (SSH) is different for Windows vs.Linux/Mac. 
   -> google search: SSH + Windows + EC2 and then 
   -> access to https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html   
@@ -34,8 +34,13 @@
   -> Install: puttygen.exe    
   -> Start: putty.exe.    
      ubuntu@ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com   
-     "ubuntu" because we use ubuntu when creating EC2 Instance.   
+     "ubuntu" because we use ubuntu when creating EC2 Instance.  
+     Publish DNS on EC2: ex. ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com  
      pulic name is "ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com" (refer to Public DNS at EC2)    
+- **SSH with Linux/Mac: connect to EC2 over internet**  
+     (it is simpler on Linux/Mac than on Windows. It needs only two command lines)
+  -> $ chmod 400 newspark.pem  
+  -> $ ssh -i newspark.pem ubuntu@ec2-52-79-236-26.ap-northeast-2.compute.amazonaws.com
 ### 3. Setting-up Anaconda3, Jupyter and Spark on EC2 Instance
 ### 3.1. Anaconda set-up (for Linux)
 - ubuntu@ip-172-31-31-67:~$ wget http://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh  

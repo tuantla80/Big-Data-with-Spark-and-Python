@@ -45,24 +45,24 @@
 ### 3.1. Anaconda set-up (for Linux)  
 Latest verion of Anaconda: https://repo.anaconda.com/archive/  
 - ubuntu@ip-172-31-31-67:~$ wget http://repo.continuum.io/archive/Anaconda3-2020.07-Linux-x86_64.sh  
-- $ bash Anaconda3-2020.07-Linux-x86_64.sh  
+- $ bash Anaconda3-2020.07-Linux-x86_64.sh  (to install it)  
 	It will ask about license argreement.  
 	-> Press Enter ->...-> At the end "yes" to install Anaconda3 at /home/ubuntu/anaconda3  
 	**Check Python**   
 	$ which python3  
-	result: /usr/bin/python3  
+	result: /usr/bin/python3  (because ubuntu is with Python as defaul but we need Python of Anaconda)  
 	**But we need Python that we install with Anaconda so do**  
 	$ source .bashrc  
 	(or you may need to try adding below line to your .bashrc file.  
 	$ export PATH=~/anaconda3/bin:$PATH )  
 	$ which python3  
-	result: /home/ubuntu/anaconda3/bin/python3
-	$ conda --version  
+	result: /home/ubuntu/anaconda3/bin/python3  (Now working with Python Anaconda in ubuntu)  
+	$ conda --version    (--> conda 4.8.4)  
 	$ conda info  
 ### 3.2. Jupyter Notebook configuration to use in EC2
-- $ jupyter notebook --generate-config    
+- $ jupyter notebook --generate-config   (to write configuration file)  
   result: /home/ubuntu/.jupyter/jupyter_notebook_config.py
-- $ mkdir certs  
+- $ mkdir certs  (to create certifications for our connections in the form of PEM file)  
 - $ cd certs  
 - $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem  
 - $ cd ~/.jupyter/  
@@ -91,9 +91,9 @@ Latest verion of Anaconda: https://repo.anaconda.com/archive/
   $ sudo apt-get install scala  
   check Scala worsk: $ scala -version   
 - Install py4j (connect Python to Java)    
-  $ export PATH=$PATH:$HOME/anaconda3/bin    
+  $ export PATH=$PATH:$HOME/anaconda3/bin  (to make sure pip install is in Anaconda - not in ubuntu as default)  
   $ conda install pip    
-  $ which pip  -> result /home/ubuntu/anaconda3/bin/pip  
+  $ which pip  -> result /home/ubuntu/anaconda3/bin/pip  (it is what we want to:  anaconda3/bin/pip)  
   $ pip install py4j    
 - **Install Spark and Hadoop**  
   Spark latest version: http://archive.apache.org/dist/spark/  

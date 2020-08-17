@@ -100,7 +100,7 @@ Latest verion of Anaconda: https://repo.anaconda.com/archive/
   $ wget http://archive.apache.org/dist/spark/spark-3.0.0/spark-3.0.0-bin-hadoop3.2.tgz  
   $ sudo tar -zxvf spark-3.0.0-bin-hadoop3.2.tgz  
   - Tell Python where to find Spark  
-  $ export SPARK_HOME='/home/ubuntu/spark-3.0.0-bin-hadoop3.2.tgz'  
+  $ export SPARK_HOME='/home/ubuntu/spark-3.0.0-bin-hadoop3.2'  
   $ export PATH=$SPARK_HOME:$PATH  
   $ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH     
 ### 4. Setting-up tensorflow  

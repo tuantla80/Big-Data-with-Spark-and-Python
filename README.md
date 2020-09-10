@@ -6,4 +6,5 @@
 ## III. Spark  
 ### 1. [Spark Introduction: Transformations and Actions](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/Spark%20introduction%20-%20Transformations%20and%20Actions.ipynb)  
 ### 2. [Spark DataFrame Basics](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/Spark_DataFrame_Basics.ipynb)  
-### 3. [MLlib: Linear Regression](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_Linear_Regression.ipynb)
+### 3. [MLlib: Linear Regression](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_Linear_Regression.ipynb)  
+### 4. [MLlib" Logistic Regression](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_Logistic_Regression.ipynb)

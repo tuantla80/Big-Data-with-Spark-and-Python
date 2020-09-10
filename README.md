@@ -8,4 +8,5 @@
 ### 2. [Spark DataFrame Basics](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/Spark_DataFrame_Basics.ipynb)  
 ### 3. [MLlib: Linear Regression](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_Linear_Regression.ipynb)  
 ### 4. [MLlib: Logistic Regression](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_Logistic_Regression.ipynb)  
-### 5. [MLlib: DecisionTree, RandomForest, GradientBoostedTree](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_DecisionTree_RandomForest_GradientBoostedTree.ipynb)
+### 5. [MLlib: DecisionTree, RandomForest, GradientBoostedTree](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_DecisionTree_RandomForest_GradientBoostedTree.ipynb)  
+### 6. [MLlib: KMeans clustering](https://github.com/tuantla80/Big-Data-with-Spark-and-Python/blob/master/MLlib_KMeans_Clustering.ipynb)
